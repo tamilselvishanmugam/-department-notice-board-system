@@ -1,0 +1,35 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "title": "Welcome to Notice Board System",
+    "content": "Welcome to the Department Notice Board System! This is a centralized platform for all department announcements and important notices. You can add, edit, view, and delete notices here. All notices are displayed in reverse chronological order (latest first).",
+    "category": "other",
+    "department": "Administration",
+    "author": "Admin",
+    "createdDate": "2024-09-22T10:00:00Z",
+    "updatedDate": "2024-09-22T10:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "title": "Fall Semester Registration",
+    "content": "All students are required to complete their fall semester registration by September 30th. Please visit the registrar's office or use the online portal. Late registration will incur additional fees.",
+    "category": "academic",
+    "department": "Registrar",
+    "author": "Registrar Office",
+    "createdDate": "2024-09-21T09:30:00Z",
+    "updatedDate": "2024-09-21T09:30:00Z",
+    "status": "active"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "title": "Campus Maintenance - Building A",
+    "content": "Building A will undergo plumbing maintenance from October 1st to October 5th. Some facilities may be temporarily unavailable. We apologize for any inconvenience.",
+    "category": "maintenance",
+    "department": "Facilities",
+    "author": "Facilities Manager",
+    "createdDate": "2024-09-20T14:15:00Z",
+    "updatedDate": "2024-09-20T14:15:00Z",
+    "status": "active"
+  }
+]

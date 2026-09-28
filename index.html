@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Notice Board System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📋 Department Notice Board</h1>
+                <p>Stay updated with the latest announcements</p>
+            </div>
+        </header>
+
+        <!-- Navigation and Controls -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="search-section">
+                    <input type="text" id="searchInput" placeholder="Search notices...">
+                </div>
+                <button class="btn btn-primary" id="addNoticeBtn">+ Add Notice</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Filters -->
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="academic">Academic</option>
+                    <option value="event">Event</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="holiday">Holiday</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Notices Display -->
+            <div class="notices-container" id="noticesContainer">
+                <div class="loading">Loading notices...</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Notice Modal -->
+    <div class="modal" id="noticeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Notice</h2>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <form id="noticeForm">
+                <div class="form-group">
+                    <label for="noticeTitle">Title *</label>
+                    <input type="text" id="noticeTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="noticeContent">Content *</label>
+                    <textarea id="noticeContent" rows="6" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="noticeCategory">Category *</label>
+                        <select id="noticeCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="academic">Academic</option>
+                            <option value="event">Event</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="holiday">Holiday</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noticeDepartment">Department</label>
+                        <input type="text" id="noticeDepartment" placeholder="e.g., IT Department">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="noticeAuthor">Author</label>
+                    <input type="text" id="noticeAuthor" placeholder="e.g., Admin">
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Notice Modal -->
+    <div class="modal" id="viewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="viewTitle"></h2>
+                <span class="close" id="closeViewModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p><strong>Category:</strong> <span id="viewCategory"></span></p>
+                <p><strong>Department:</strong> <span id="viewDepartment"></span></p>
+                <p><strong>Author:</strong> <span id="viewAuthor"></span></p>
+                <p><strong>Posted:</strong> <span id="viewDate"></span></p>
+                <hr>
+                <div id="viewContent" style="line-height: 1.6;"></div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-warning" id="editBtn">Edit</button>
+                <button class="btn btn-danger" id="deleteBtn">Delete</button>
+                <button class="btn btn-secondary" id="closeViewBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
